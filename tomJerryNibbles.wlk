@@ -17,13 +17,17 @@ object tom {
       return energia;
     }
 
+    method energiaConsumida(metros) = metros / 2;  
+
     method puedeCazarA(metros) {
-      return energia >= metros;
+      return energia >= self.energiaConsumida(metros);
     }
 
     method puedeCazar_A_(raton, metros) {
 
-    return self.puedeCazarA(metros) and self.comer(raton);
+    if( self.puedeCazarA(metros)){ 
+      self.correr(metros)
+      self.comer(raton);}
     }
 
 }
