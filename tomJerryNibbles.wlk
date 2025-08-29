@@ -17,6 +17,15 @@ object tom {
       return energia;
     }
 
+    method puedeCazarA(metros) {
+      return energia >= metros;
+    }
+
+    method puedeCazar_A_(raton, metros) {
+
+    return self.puedeCazarA(metros) and self.comer(raton);
+    }
+
 }
 
 object jerry {
@@ -26,7 +35,7 @@ object jerry {
 
     method peso() = edad * 20;
 
-    method compleAños() {
+    method cumpleAños() {
       edad = edad + 1
       return edad
     }
@@ -35,6 +44,7 @@ object jerry {
 object nibbles {
     method peso() = 35; 
 }
+
 // Inventar otro ratón
 
 object silvestre {
